@@ -102,14 +102,16 @@ def make_coffee(drink_name, order_ingredients): # call2() 유형으로 정의
 is_on = True
 while is_on:
     choice = input('어떤 음료를 드시겠습니까? 에스프레소 / 라떼 / 카푸치노 >>> ')
-    #todo - 1 : choice가 off라면 자판기가 종료되었습니다, 라고 출력하면서 반복 종료
+    # todo - 1 : choice가 off라면 자판기가 종료되었습니다, 라고 출력하면서 반복 종료
     if choice == 'off':
         is_on = False
         print('자판기를 종료합니다. 🎈')
-    #todo - 2 : choice가 report라면 물 : 어쩌고ml ~ 커피 : 어쩌고g / 돈 : $몇달러 라고 출력될 수 있도록 작성하시오. -> def report()를 call1() 유형으로 정의해서 함수만 호출하시오.
+    # todo - 2 : choice가 report라면 물 : 어쩌고ml ~ 커피 : 어쩌고g / 돈 : $몇달러 라고 출력될 수 있도록 작성하시오. ->
+    # def report()를 call1() 유형으로 정의해서 함수만 호출하시오.
     elif choice == 'report':
         report()
-    #todo - 3 : choice가 에스프레소 / 라떼 / 카푸치노에 해당된다면 실행문으로 다음단계로직 이라고 콘솔에 출력할 수 있도록 코드를 작성하시오.
+    # todo - 3 : choice가 에스프레소 / 라떼 / 카푸치노에 해당된다면
+    # 실행문으로 다음단계로직 이라고 콘솔에 출력할 수 있도록 코드를 작성하시오.
     elif choice in ['에스프레소', '라떼', '카푸치노']:
         drink = MENU[choice]
         if is_resource_enough(drink['재료']):
